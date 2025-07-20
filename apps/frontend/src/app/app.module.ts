@@ -6,13 +6,19 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module'; 
 
+
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
+  declarations: [
+    // هنا فقط المكونات العادية (غير المستقلة)
+    // إذا كانت المكونات كلها standalone، يمكن تركها فارغة
+  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -26,8 +32,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ForgotPasswordComponent,
     ResetPasswordComponent,
     DashboardComponent,
+    NavbarComponent,
   ],
-  bootstrap: [DashboardComponent],
+  bootstrap: [DashboardComponent],  
 })
-
 export class AppModule {}

@@ -1,0 +1,10 @@
+<nav class="navbar">
+  <a routerLink="/" class="logo">MyApp</a>
+  <div class="links">
+    <a routerLink="/">Home</a>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/register" *ngIf="!isLoggedIn()">Register</a>
+    <a routerLink="/login" *ngIf="!isLoggedIn()">Login</a>
+    <a href="#" (click)="logout()" *ngIf="isLoggedIn()">Sign Out</a>
+  </div>
+</nav>
